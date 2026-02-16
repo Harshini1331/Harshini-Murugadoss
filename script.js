@@ -4,9 +4,9 @@ const projects = [
         id: "veritrace",
         title: "VeriTrace - AI-Powered Compliance Auditor",
         summary: "A privacy-first, local RAG application that automates compliance auditing by securely cross-referencing internal policies against federal regulations without data egress.",
-        image: "images/VeriTrace/architecture%20diagram.png",
+        image: "images/VeriTrace/architecture%20dia.png",
         gallery: [
-            "images/VeriTrace/architecture%20diagram.png",
+            "images/VeriTrace/architecture%20dia.png",
             "images/VeriTrace/veritrace.png",
             "images/VeriTrace/veritrace1.png",
             "images/VeriTrace/veritrace2.png"
