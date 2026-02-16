@@ -1,6 +1,32 @@
 // Project Data
 const projects = [
     {
+        id: "veritrace",
+        title: "VeriTrace - AI-Powered Compliance Auditor",
+        summary: "A privacy-first, local RAG application that automates compliance auditing by securely cross-referencing internal policies against federal regulations without data egress.",
+        image: "images/VeriTrace/veritrace.png",
+        gallery: [
+            "images/VeriTrace/veritrace.png",
+            "images/VeriTrace/architecture%20diagram.png",
+            "images/VeriTrace/veritrace1.png",
+            "images/VeriTrace/veritrace2.png"
+        ],
+        challenge: "Compliance teams face a massive bottleneck: manually verifying internal policy documents against constantly changing federal regulations is slow, error-prone, and resource-intensive. Furthermore, strict data privacy requirements prohibit uploading sensitive internal documents to cloud-based LLMs like GPT-4, creating a critical need for a powerful but completely offline AI solution.",
+        solution: "I architected a secure, local-first Retrieval-Augmented Generation (RAG) system. By leveraging Ollama to run Llama 3 locally and ChromaDB for vector storage, the application ingests and analyzes sensitive documents entirely on-premise. It combines a polished Streamlit interface for non-technical auditors with a robust backend that fetches live federal data, ensuring compliance checks are both accurate and secure.",
+        highlights: [
+            "<strong>Privacy-First Architecture (Local RAG):</strong> To meet strict data sovereignty requirements, I built the entire inference pipeline to run offline. Using Ollama for LLM inference and a local ChromaDB instance for vector storage, the system processes sensitive data without a single byte leaving the secure local environment.",
+            "<strong>Hybrid Data Ingestion Strategy:</strong> I implemented a dual-pipeline approach: Docling handles complex PDF layouts (preserving tables and headers), while a custom ingestor interacts with the Federal Register API to fetch live regulatory updates.",
+            "<strong>Semantic Chunking for Precision:</strong> I integrated semantic chunking (via semchunk) to intelligently group related text based on meaning rather than character count, significantly improving retrieval accuracy."
+        ],
+        tech: ["Llama 3 (Ollama)", "ChromaDB", "Python", "Streamlit", "Docling"],
+        metrics: [
+            { value: "100%", label: "Data Privacy" },
+            { value: "Seconds", label: "Lookup Time" },
+            { value: "Yes", label: "Verifiable Citations" }
+        ],
+        link: "https://github.com/Harshini1331/VeriTrace-Agent"
+    },
+    {
         id: "ims-fault",
         title: "IMS Bearing Fault Detection System",
         // One-Line Summary

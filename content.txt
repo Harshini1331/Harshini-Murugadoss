@@ -11,6 +11,7 @@ To build a high-impact portfolio that highlights your skills as a Machine Learni
   - Kaggle - https://www.kaggle.com/harshinimurugadoss13
   - Medium - https://medium.com/@harshini13
 - **Contact Email**: harshini.murugadoss@outlook.com
+Portfolio website - https://harshini1331.github.io/Harshini-Murugadoss/
 - **Phone Number**: +1 (951) 558-0221
 
 ## 2. About Me
@@ -29,6 +30,37 @@ I Figure Things Out: My engineering philosophy is simple: there is always a solu
 The Goal: I am currently seeking an AI/MLE role where I can apply this technical rigor and "figure it out" attitude to build scalable, high-impact AI solutions.
 
 ## 3. Projects (The most important section!)
+
+### Project
+VeriTrace - AI-Powered Compliance Auditor
+One-Line Summary A privacy-first, local RAG application that automates compliance auditing by securely cross-referencing internal policies against federal regulations without data egress.
+
+The Challenge Compliance teams face a massive bottleneck: manually verifying internal policy documents against constantly changing federal regulations is slow, error-prone, and resource-intensive. Furthermore, strict data privacy requirements prohibit uploading sensitive internal documents to cloud-based LLMs like GPT-4, creating a critical need for a powerful but completely offline AI solution.
+
+The Solution I architected a secure, local-first Retrieval-Augmented Generation (RAG) system. By leveraging Ollama to run Llama 3 locally and ChromaDB for vector storage, the application ingests and analyzes sensitive documents entirely on-premise. It combines a polished Streamlit interface for non-technical auditors with a robust backend that fetches live federal data, ensuring compliance checks are both accurate and secure.
+
+Technical Highlights (The "Portfolio Gold")
+
+Privacy-First Architecture (Local RAG): To meet strict data sovereignty requirements, I built the entire inference pipeline to run offline. Using Ollama for LLM inference and a local ChromaDB instance for vector storage, the system processes sensitive data without a single byte leaving the secure local environment.
+
+Hybrid Data Ingestion Strategy: Real-world compliance requires more than just PDF parsing. I implemented a dual-pipeline approach: Docling handles complex PDF layouts (preserving tables and headers), while a custom ingestor interacts with the Federal Register API to fetch live regulatory updates. This ensures the AI reasons across both static internal policies and dynamic external laws.
+
+Semantic Chunking for Precision: Standard fixed-size text splitting destroys context in legal documents. I integrated semantic chunking (via semchunk) to intelligently group related text based on meaning rather than character count. This significantly improved the retrieval accuracy, ensuring the LLM receives complete clauses rather than fragmented sentences.
+
+Tech Stack
+
+AI/ML: Llama 3 (via Ollama), ChromaDB (Vector Store), Nomic Embed Backend/Processing: Python, Docling (Document Parsing), Semchunk Frontend: Streamlit Data: Federal Register API, Internal Policy Documents (PDF)
+
+Key Metrics
+
+100% Data Privacy: Complete offline capability with zero external data egress. Seconds vs. Minutes: Reduced compliance lookup time from manual hours to instant semantic search. Verifiable Citations: Every AI-generated answer includes direct citations to the source document and page number.
+
+Architecture Diagram
+
+[Internal Policies (PDF)] --> [Docling Parser] --> [Semantic Chunking] --> [ChromaDB (Vector Store)] [Federal Register API] --> [Data Ingestor] --> [Semantic Chunking] --> [ChromaDB (Vector Store)] [User Query] --> [Local Embedding] --> [Vector Search] --> [Llama 3 (Ollama)] --> [Audit Response]
+
+Links: GitHub Repository https://github.com/Harshini1331/VeriTrace-Agent Images: inside images/VeriTrace (Placeholder)
+
 ### Project 1: IMS Bearing Fault Detection System
 One-Line Summary An end-to-end predictive maintenance pipeline capable of detecting machinery anomalies in real-time, deployed via NVIDIA Triton Inference Server.
 
