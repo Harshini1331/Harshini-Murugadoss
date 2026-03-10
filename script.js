@@ -2,8 +2,8 @@
 const projects = [
     {
         id: "scholarstream",
-        title: "ScholarStream — Production RAG Pipeline for Scientific Literature",
-        summary: "End-to-end RAG system: arXiv ingestion → GPU PDF parsing → hybrid vector search → agentic LLM routing → real-time streaming answers.",
+        title: "ScholarStream : Production RAG Pipeline",
+        summary: "End-to-end RAG system: arXiv ingestion, GPU PDF parsing, hybrid vector search, agentic LLM routing, real-time streaming answers.",
         image: "images/scholarstream/architecture.png",
         gallery: [
             "images/scholarstream/architecture.png",

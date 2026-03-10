@@ -262,6 +262,8 @@ Generated high-fidelity 2D occupancy grid maps (.pgm) of the warehouse layout.
 Full Autonomy:
 Validated end-to-end workflow: Mapping $\to$ Planning $\to$ Navigation $\to$ Manipulation
 
+### Project 7 : 
+
 ## 4. Skills
 Technical Skills
 Languages
