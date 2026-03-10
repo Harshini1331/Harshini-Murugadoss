@@ -1,6 +1,39 @@
 // Project Data
 const projects = [
     {
+        id: "scholarstream",
+        title: "ScholarStream — Production RAG Pipeline for Scientific Literature",
+        summary: "End-to-end RAG system: arXiv ingestion → GPU PDF parsing → hybrid vector search → agentic LLM routing → real-time streaming answers.",
+        image: "images/scholarstream/architecture.png",
+        gallery: [
+            "images/scholarstream/architecture.png",
+            "images/scholarstream/agentic_rag_workflow.png",
+            "images/scholarstream/ask_stream.png",
+            "images/scholarstream/search_papers.png",
+            "images/scholarstream/opensearch.png",
+            "images/scholarstream/system_stats.png",
+            "images/scholarstream/airflow.png",
+            "images/scholarstream/langfuse%20(1).png",
+            "images/scholarstream/langfuse%20(2).png"
+        ],
+        challenge: "Scientific literature grows at an overwhelming pace — thousands of arXiv papers are published daily. Researchers need immediate, context-aware answers drawn from full-text papers, not just abstracts. The challenge was building a production-grade pipeline that could automatically ingest, parse, and index papers while serving intelligent answers completely locally, with no data leaving the machine and with acceptable latency for interactive use.",
+        solution: "I architected ScholarStream as a seven-microservice system orchestrated via Docker Compose. Papers are fetched from the arXiv API on a daily Airflow schedule, parsed with GPU-accelerated Docling (RTX 5070) to preserve equations and figures, chunked into 3,700+ semantic segments, and indexed in OpenSearch as 768-dimensional vectors. A FastAPI backend exposes a hybrid BM25 + KNN search endpoint with manual Reciprocal Rank Fusion, a LangGraph agentic loop handles decide → retrieve → grade → rewrite → generate, Redis caches frequent queries for 150–400x speedup, and answers stream back to a custom HTML UI via Server-Sent Events.",
+        highlights: [
+            "<strong>Agentic LangGraph Routing:</strong> The LLM isn't just a generator — it decides whether retrieval is needed, grades chunk relevance, rewrites ambiguous queries, and loops until confident. This reduces hallucinations and improves answer grounding compared to naive RAG.",
+            "<strong>Hybrid Search + Manual RRF Fusion:</strong> BM25 scores keyword relevance while KNN captures semantic similarity. I implemented Reciprocal Rank Fusion manually to merge both ranked lists, consistently outperforming either method alone without requiring a learned fusion model.",
+            "<strong>Full Observability with Langfuse:</strong> Every pipeline step (embed → retrieve → grade → generate) is instrumented as a Langfuse span, giving end-to-end tracing, latency breakdowns, and token usage visibility — essential for production debugging.",
+            "<strong>GPU-Accelerated Ingestion:</strong> Docling runs on an RTX 5070 to parse complex PDF layouts (multi-column, equations, tables) at high throughput, far outpacing CPU-bound tools like PyMuPDF for dense scientific content."
+        ],
+        tech: ["Python", "FastAPI", "LangGraph", "LangChain", "OpenSearch", "Ollama", "Llama 3", "Redis", "Langfuse", "Apache Airflow", "Docling", "Docker", "PostgreSQL", "NVIDIA CUDA"],
+        metrics: [
+            { value: "3,700+", label: "Semantic Chunks Indexed" },
+            { value: "150–400x", label: "Cache Speedup (Redis)" },
+            { value: "7", label: "Microservices (Docker Compose)" },
+            { value: "9", label: "REST API Endpoints" }
+        ],
+        link: "https://github.com/harshini1331/ScholarStream"
+    },
+    {
         id: "veritrace",
         title: "VeriTrace : AI-Powered Compliance Auditor",
         summary: "A privacy-first, local RAG application that automates compliance auditing by securely cross-referencing internal policies against federal regulations without data egress.",
