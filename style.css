@@ -318,12 +318,14 @@ ul {
 }
 
 .about-photo {
-    width: 150px;
-    height: 150px;
+    float: left;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-primary);
-    margin-bottom: 2rem;
+    border: 3px solid var(--accent-primary);
+    margin: 0.4rem 2rem 1rem 0;
+    shape-outside: circle(50%);
 }
 
 .about-text p {
