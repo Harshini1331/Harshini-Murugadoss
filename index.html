@@ -21,7 +21,17 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">HARSHINI.AI</a>
+            <div class="brand">
+                <a href="#" class="logo-link">
+                    <img src="assets/headshot.jpg" alt="Harshini Murugadoss" class="nav-avatar">
+                    <span class="logo">Harshini.ai</span>
+                </a>
+                <button aria-label="Hear my name pronounced" class="pronounce-btn"
+                    onclick="document.getElementById('name-audio').play()">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <audio id="name-audio" src="assets/name-pronunciation.mp3.mp3" preload="none"></audio>
+            </div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
@@ -37,7 +47,7 @@
         <div class="container">
             <div class="hero-content" style="opacity: 0; animation: slideUp 0.8s forwards;">
                 <span class="role-badge">AI Engineer · Forward Deployed Engineer · AI Security</span>
-                <h1>I build production AI systems — and I'm the one who tries to break them, too.</h1>
+                <h1>I build AI systems — and break them on purpose.</h1>
                 <p class="hero-subtitle">
                     MS in Robotics (specialization in AI & Perception) from UC Riverside. I've red-teamed
                     enterprise LLMs at Enkrypt AI and shipped production RAG pipelines that cut response

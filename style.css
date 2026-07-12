@@ -180,6 +180,43 @@ ul {
     letter-spacing: -0.05em;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-primary);
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.pronounce-btn:hover {
+    opacity: 1;
+    color: var(--accent-primary);
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
