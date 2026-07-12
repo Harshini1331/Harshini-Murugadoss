@@ -277,6 +277,11 @@ ul {
     padding-top: 2rem;
 }
 
+.stat-item {
+    flex: 1;
+    min-width: 220px;
+}
+
 .stat-item h3 {
     font-size: 2.5rem;
     margin-bottom: 0px;

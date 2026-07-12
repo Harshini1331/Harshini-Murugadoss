@@ -61,7 +61,11 @@
                 <div class="hero-stats">
                     <div class="stat-item">
                         <h3>150–400x faster RAG responses</h3>
-                        <p>→ ScholarStream, via Redis semantic caching</p>
+                        <p>→ ScholarStream, via Redis semantic cache</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+ students served in production</h3>
+                        <p>→ Career Compass, live across 7 Indian states</p>
                     </div>
                 </div>
             </div>
@@ -78,9 +82,10 @@
                         Data Science. I've spent my career on both sides of AI systems, building them and
                         testing where they break.</p>
                     <p>At Enkrypt AI, I run red-teaming engagements against enterprise LLMs, translating
-                        security risk for both engineers and executives. Before that, I built Career Compass, a
-                        multilingual career-guidance platform for rural students, and ScholarStream, a
-                        production RAG pipeline that cut response times by up to 400x.</p>
+                        security risk for both engineers and executives. Before that, I shipped Career Compass
+                        end-to-end — a multilingual AI career guidance platform now serving 100+ students across
+                        7 Indian states — and built ScholarStream, a production RAG pipeline that cut response
+                        times by up to 400x.</p>
                     <p>I ship systems, and I think about what happens when someone tries to break them on
                         purpose.</p>
                     <p>Outside of work, I chase the same curiosity into everything else, lately that's meant
@@ -190,6 +195,22 @@
         <div class="container">
             <h2>Journey</h2>
             <div class="timeline">
+                <!-- Experience 0 -->
+                <div class="timeline-item">
+                    <span class="timeline-date">May 2026 - Jul 2026 | Hybrid</span>
+                    <h3 class="timeline-title">AI Operations Engineer</h3>
+                    <p class="timeline-company">Enkrypt AI</p>
+                    <ul class="timeline-desc">
+                        <li>Led red teaming engagements for an enterprise customer across initial and final
+                            assessment rounds, authoring the security report and supplementary findings.</li>
+                        <li>Built structured learning pathways for Enkrypt AI's Academy (AI Security for
+                            Executives, Enkrypt 101, Agent Hooks Academy), translating LLM risk for technical
+                            and executive audiences.</li>
+                        <li>Redesigned key website surfaces and supported growth initiatives including
+                            analytics integration.</li>
+                    </ul>
+                </div>
+
                 <!-- Education 1 -->
                 <div class="timeline-item">
                     <span class="timeline-date">Sep 2024 - Dec 2025</span>
@@ -199,14 +220,19 @@
 
                 <!-- Experience 1 -->
                 <div class="timeline-item">
-                    <span class="timeline-date">Jun 2025 - Nov 2025</span>
-                    <h3 class="timeline-title">AI Engineer</h3>
+                    <span class="timeline-date">Jun 2025 - Apr 2026</span>
+                    <h3 class="timeline-title">AI Engineer (Contract)</h3>
                     <p class="timeline-company">India Literacy Project (ILP), Remote</p>
                     <ul class="timeline-desc">
-                        <li>Architected a GenAI-powered career guidance platform with custom speech-to-text for local
-                            dialects.</li>
-                        <li>Implemented Hybrid Search RAG (Supabase pgvector + Gemini) for context-aware advice.</li>
-                        <li>Built a "Teacher Verification Layer" to ensure 100% safety for K-12 students.</li>
+                        <li>Owned and shipped a production full-stack platform end-to-end (React 18 + TypeScript
+                            front-end, FastAPI + PostgreSQL back-end) serving 100+ concurrent K-12 students
+                            across 7 Indian states.</li>
+                        <li>Designed and implemented a 3-tier Role-Based Access Control (RBAC) system (Admin,
+                            Teacher, Student) using PostgreSQL Row-Level Security, securing data isolation
+                            across 500+ monthly sessions.</li>
+                        <li>Reduced LLM API costs by 40% and token usage by 35% by applying core ML evaluation
+                            concepts to benchmark model configurations and design an adaptive context-window
+                            strategy.</li>
                     </ul>
                 </div>
 
@@ -226,11 +252,13 @@
                 <div class="timeline-item">
                     <span class="timeline-date">Jan 2023 - Dec 2023</span>
                     <h3 class="timeline-title">Machine Learning Intern</h3>
-                    <p class="timeline-company">DGTEL Rehumanice</p>
+                    <p class="timeline-company">DGTEL Rehumanice Pvt. Ltd.</p>
                     <ul class="timeline-desc">
-                        <li>Engineered an On-Device Tamil Handwritten Character Recognition System for children.</li>
-                        <li>Curated a custom dataset of 247 characters and trained a custom CNN.</li>
-                        <li>Deployed via TensorFlow Lite for <50ms offline inference.</li>
+                        <li>Implemented and trained a custom CNN to 98% accuracy on a proprietary 2,000+ sample
+                            dataset, applying core ML concepts (data augmentation, class balancing, model
+                            evaluation) from scratch.</li>
+                        <li>Converted the trained model to TensorFlow Lite, debugging and optimizing for
+                            sub-50ms offline edge inference with zero internet dependency.</li>
                     </ul>
                 </div>
 
