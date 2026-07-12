@@ -153,6 +153,26 @@ ul {
     transform: translateY(-2px);
 }
 
+.cta-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.resume-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.resume-link:hover {
+    color: var(--accent-primary);
+}
+
 /* Components */
 /* Navbar */
 .navbar {
@@ -174,10 +194,39 @@ ul {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: 800;
     font-family: 'Fira Code', monospace;
     letter-spacing: -0.05em;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.pronounce-btn:hover {
+    opacity: 1;
+    color: var(--accent-primary);
 }
 
 .nav-links {
@@ -235,13 +284,20 @@ ul {
 .hero-stats {
     display: flex;
     gap: 3rem;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     border-top: 1px solid var(--border-color);
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 220px;
 }
 
 .stat-item h3 {
-    font-size: 2.5rem;
+    font-size: clamp(1.35rem, 2.25vw, 2.25rem);
+    font-weight: 500;
+    min-height: 2.4em;
     margin-bottom: 0px;
     color: var(--text-primary);
 }
@@ -259,6 +315,17 @@ ul {
     grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
     align-items: start;
+}
+
+.about-photo {
+    float: left;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-primary);
+    margin: 0.4rem 2rem 1rem 0;
+    shape-outside: circle(50%);
 }
 
 .about-text p {
@@ -588,8 +655,9 @@ ul {
 
 /* Certifications */
 .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -599,6 +667,8 @@ ul {
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     text-align: center;
+    flex: 1 1 250px;
+    max-width: 280px;
 }
 
 .cert-item img {

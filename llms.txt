@@ -1,0 +1,30 @@
+# Harshini Murugadoss
+
+> AI Engineer with an MS in Robotics (AI & Perception) from UC Riverside (GPA 3.97/4.0).
+> Ships production RAG pipelines and runs LLM red-teaming/security assessments. Open to
+> AI Engineer, Forward Deployed Engineer, and AI Security roles. Based in Milpitas,
+> California.
+
+## Current Role
+AI Operations Engineer at Enkrypt AI (May 2026 - present) - leads red-teaming
+engagements for enterprise LLM customers, builds AI security education content.
+
+## Key Projects
+- ScholarStream: production RAG pipeline over arXiv papers. Hybrid BM25+KNN search,
+  agentic LangGraph routing, 150-400x speedup via Redis semantic caching.
+  https://github.com/harshini1331/ScholarStream
+- VeriTrace: fully offline, privacy-first RAG compliance auditor. Llama 3, Ollama,
+  ChromaDB.
+- Career Compass: multilingual AI career guidance platform serving 100+ students
+  across 7 Indian states, built at India Literacy Project. React 18, TypeScript,
+  FastAPI, PostgreSQL.
+
+## Skills
+Python, FastAPI, LangChain, LangGraph, RAG, LLM Security, AI Red Teaming, NVIDIA
+Triton, Docker, React, TypeScript, PyTorch, TensorFlow.
+
+## Links
+- Portfolio: https://harshini1331.github.io/Harshini-Murugadoss/
+- GitHub: https://github.com/Harshini1331
+- LinkedIn: https://linkedin.com/in/harshinimurugadoss
+- Contact: harshini.murugadoss@outlook.com
