@@ -227,6 +227,7 @@ const certifications = [
     { name: "Oracle Foundations Associate", file: "certificate/Oracle-FoundationsAssociate.pdf" },
     { name: "Data Science - Coursera", file: "certificate/Data Science - Coursera.pdf" },
     { name: "Python & Statistics - Coursera", file: "certificate/Python & Statistics - Coursera.pdf" },
+    { name: "Claude Code in Action", file: "certificate/Claude Code in action.pdf" },
 ];
 
 // DOMContentLoaded
