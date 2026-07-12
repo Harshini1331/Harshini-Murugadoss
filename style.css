@@ -212,14 +212,6 @@ ul {
     gap: 0.6rem;
 }
 
-.nav-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--accent-primary);
-}
-
 .pronounce-btn {
     background: none;
     border: none;
@@ -323,6 +315,15 @@ ul {
     grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
     align-items: start;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-primary);
+    margin-bottom: 2rem;
 }
 
 .about-text p {
