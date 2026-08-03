@@ -1,6 +1,31 @@
 // Project Data
 const projects = [
     {
+        id: "nanoinference",
+        title: "NanoInference : High-Throughput LLM Serving Engine",
+        summary: "Custom PyTorch LLM serving engine featuring a custom Triton PagedAttention kernel, Sarathi-style continuous batching, Multi-LoRA adapter serving, and OpenAI-compatible streaming gateway.",
+        image: "images/nanoinference/architecture.png",
+        gallery: [
+            "images/nanoinference/architecture.png"
+        ],
+        challenge: "High-throughput open-weight LLM serving suffers from severe VRAM fragmentation, high Time-To-First-Token (TTFT) latency under concurrent load, and inflexible framework overhead.",
+        solution: "Built a systems-level LLM serving engine from scratch in PyTorch without high-level wrappers. Developed a custom Triton PagedAttention kernel to allocate non-contiguous GPU physical blocks, integrated Sarathi-style continuous batching, and exposed an asynchronous FastAPI gateway with live telemetry.",
+        highlights: [
+            "<strong>Custom Triton PagedAttention Kernel:</strong> Eliminates physical memory fragmentation on GPU VRAM, allowing higher batch sizes and dynamic token allocation.",
+            "<strong>Continuous Batching & Chunked Prefill:</strong> Minimizes TTFT latency by interleaving prefill and decode iterations across concurrent user requests.",
+            "<strong>Multi-LoRA & Quantization:</strong> Dynamic adapter hot-swapping alongside engine-level FP8/INT8 quantization via bitsandbytes.",
+            "<strong>Full Telemetry Gateway:</strong> Asynchronous FastAPI gateway providing SSE streaming, immediate VRAM reclamation, Prometheus/Grafana dashboard metrics, and Kubernetes GPU manifests."
+        ],
+        tech: ["PyTorch", "Triton", "CUDA", "FastAPI", "Docker", "Kubernetes", "Prometheus", "Grafana"],
+        metrics: [
+            { value: "Triton PagedAttention", label: "Custom Kernel" },
+            { value: "Sarathi Chunked Prefill", label: "Batching" },
+            { value: "Prometheus & Grafana", label: "Monitoring" },
+            { value: "OpenAI-Compatible SSE", label: "Gateway" }
+        ],
+        link: "https://github.com/harshini1331/NanoInference"
+    },
+    {
         id: "scholarstream",
         title: "ScholarStream : Production RAG Pipeline",
         summary: "End-to-end RAG system: arXiv ingestion, GPU PDF parsing, hybrid vector search, agentic LLM routing, real-time streaming answers.",
