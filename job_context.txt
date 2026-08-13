@@ -1,0 +1,187 @@
+# Harshini Murugadoss (hahr-SHEE-nee MOO-roo-guh-DAHS) — Job Search Context
+
+## Personal
+- Name: Harshini Murugadoss
+- Location: Milpitas, California, US
+- Email: harshini.murugadoss@outlook.com
+- LinkedIn: linkedin.com/in/harshinimurugadoss
+- GitHub: github.com/Harshini1331
+- Pronouns: She/Her
+- Languages: Tamil (Native), English (Native), Hindi (Professional), Kannada (Limited), French (Limited), Marathi (Mother Tongue)
+
+## Education
+- MS in Robotics, UC Riverside, GPA 3.97/4.0, Sep 2024 – Dec 2025
+- B.Tech in AI & Data Science, Saveetha Engineering College Chennai, CGPA 9.13/10.0, Aug 2020 – May 2024
+
+## Target Roles
+- AI Engineer
+- Machine Learning Engineer
+- AI Software Engineer
+- Generative AI Engineer
+- Data Scientist
+- Forward Deployed Engineer
+- Open to Remote or anywhere in the US
+
+## Experience
+
+### AI Operations Engineer — Enkrypt AI
+May 2026 – Jul 2026 | Hybrid
+- Led red teaming engagements for an enterprise customer across initial and final assessment rounds, authoring the security report plus a supplementary appendix and additional findings report
+- Built structured learning pathways for Enkrypt AI's Academy, a self-learning platform for AI security — "AI Security for Executives," "Enkrypt 101," and "Agent Hooks Academy" — translating LLM risk and secure AI adoption concepts for both technical and executive audiences
+- Designed marketing and product assets: ad creative and accompanying guide for secure vibe coding, demo mockups for the LLM leaderboard 
+- Redesigned key website surfaces including the navigation bar, footer, partners page, blog, "Talk to an Expert" section, and contact us page
+- Supported growth initiatives: updated LinkedIn ad copy for Academy Games, ran a Reddit awareness campaign, and assisted with pixel/analytics integration
+- Stack: AI Red Teaming, LLM Security, Content Strategy, Web/UX Design, Growth Marketing, Analytics Integration
+
+### AI Engineer (Contract) — India Literacy Project
+Jun 2025 – April 2026 | Remote
+- Built Career Compass — multilingual AI career guidance platform for rural Indian students (Grades 8-12); officially launched July 27, 2026
+- React 18 / TypeScript frontend, Supabase (PostgreSQL, Auth, Storage)
+- 3-tier role-based access control (Admin, Teacher, Student) via Row-Level Security
+- 8 multilingual NLP assessment modules — English, Kannada, Tamil
+- Unicode-based language auto-detection, offline recording queue, resumable chunked uploads
+- 3-tier STT fallback: Google Cloud STT → Azure Speech → Gemini 1.5 Flash
+- Sarvam AI streaming STT via Python FastAPI proxy for real-time low-latency voice input
+- Language-aware post-processing for Indian-English phonetic patterns (v/w, th/d substitution)
+- Human-in-the-loop pipeline: Gemini 2.0 Flash summaries → teacher approval → Profile Card + Career Roadmap
+- Prompt-based context injection with full conversation history ("Vidya Saathi" AI persona)
+- 40% LLM cost reduction via Gemini Pro → Gemini 2.0 Flash migration + in-memory caching
+- Stack: Google Gemini API, Supabase, React, TypeScript, FastAPI, Python, Sarvam AI
+
+### AI Research Intern — PURPLESPOT
+Jan 2024 – May 2024
+- NLP automation pipeline converting daily WhatsApp logistics messages to structured SQL
+- Named Entity Recognition (NER) using LLMs (Gemini/GPT) — Origin, Destination, Truck Size, Date
+- Regex achieved 0% accuracy on edge cases — pivoted to LLM-based extraction
+- Prompt engineering for code-switching, slang, abbreviations → reliable structured JSON output
+- Stack: Python, LLMs, Prompt Engineering, NLP, SQL
+
+### Machine Learning Intern — DGTEL Rehumanice
+Jan 2023 – Dec 2023
+- On-device Tamil Handwritten Character Recognition for children's language learning app
+- Curated proprietary dataset of 247 Tamil characters written by children (no public dataset existed)
+- Custom CNN optimized for Tamil script → TensorFlow Lite → sub-50ms offline inference
+- Stack: TensorFlow, TFLite, Python, Mobile AI
+
+## Projects
+
+### NanoInference — High-Throughput LLM Serving Engine (2026)
+- Systems-level LLM inference engine built from scratch in PyTorch — no high-level serving wrappers
+- Custom Triton-accelerated PagedAttention kernel (with PyTorch fallback) eliminating VRAM fragmentation via non-contiguous physical block allocation
+- Continuous batching with Sarathi-style chunked prefill/decode phase splitting for maximized GPU utilization
+- Dynamic Multi-LoRA adapter serving — hot-swaps PEFT adapters per-request without redundant base model replication
+- Guided decoding via custom LogitsProcessor enforcing JSON Schema/grammar through logit-bias masking
+- Speculative decoding with draft-model/target-model rejection sampling for accelerated token generation
+- Engine-level quantization support: FP8 linear weights, INT8/INT4 via bitsandbytes
+- Asynchronous FastAPI gateway: OpenAI-compatible /v1/chat/completions endpoint with SSE streaming and instant VRAM block reclamation on client disconnect
+- Prometheus telemetry (TTFT, inter-token latency, block utilization) exposed natively for Grafana dashboarding + Gradio 5+ developer playground
+- Multi-stage CUDA Docker container with Kubernetes GPU deployment manifests
+- Stack: Python, PyTorch, Triton, CUDA, FastAPI, Prometheus, Grafana, Gradio, Docker, Kubernetes, bitsandbytes, PEFT/LoRA
+
+### ScholarStream — Production RAG Pipeline (2026)
+github.com/harshini1331/ScholarStream
+- 7-service RAG system answering questions over ML research papers fetched dynamically from arXiv API
+- Apache Airflow-orchestrated ingestion pipeline
+- Hybrid BM25 + KNN search with manual Reciprocal Rank Fusion (RRF) in Python
+- Agentic LangGraph pipeline: decide → retrieve → grade → rewrite → generate
+- 150–400x response speedup via SHA-256 keyed Redis semantic cache (100ms vs 15–20s)
+- GPU-accelerated PDF parsing: Docling on RTX 5070 via NVIDIA CUDA 12.4
+- 3 query modes: standard, streaming SSE, agentic LangGraph
+- Full Langfuse v3 observability — spans for embed, retrieve, generate
+- Stack: Python, FastAPI, LangChain, LangGraph, OpenSearch, PostgreSQL, Ollama, Llama 3, nomic-embed-text, Apache Airflow, Redis, Langfuse, Docling, Docker Compose, NVIDIA CUDA 12.4, uv
+
+### IMS Bearing Fault Detection — Predictive Maintenance (2024)
+github.com/Harshini1331/ims-fault-diagnosis
+- Anomaly detection on time series vibration data (NASA IMS dataset)
+- Random Forest over CNN — scarce failure events, 40 statistical features (RMS, Kurtosis, Skewness)
+- 98% accuracy, sub-50ms end-to-end latency
+- NVIDIA Triton Python Backend (ONNX export was brittle for Scikit-learn preprocessors)
+- Containerized in Docker (tritonserver:23.12-py3)
+- NOTE: Harshini is NOT confident discussing this project in depth — avoid leading with it
+- Stack: Python, Scikit-learn, NVIDIA Triton, Docker, HTTP/gRPC, joblib, ONNX
+
+### VeriTrace — AI-Powered Compliance Auditor (2025)
+- Privacy-first fully offline RAG system for compliance auditing
+- Cross-references internal policy docs against live Federal Register API regulations
+- Zero data egress — runs entirely on-premise
+- Semantic chunking (semchunk) for legal documents
+- Citation-backed audit responses with source + page number references
+- Stack: Python, Llama 3, Ollama, ChromaDB, LangChain, Streamlit, Docling, Nomic Embed, Federal Register API
+
+### Medical AI — Pulmonary Health Diagnosis (2024)
+github.com/Harshini1331/DECODING-PULMONARY-HEALTH
+- Benchmarked 5 CNN architectures for COVID-19, Pneumonia, Healthy lung diagnosis
+- VGG16 (78.56%) outperformed ResNet50 (60.6%) and DenseNet121 (69%)
+- Dynamic inverse weighting + data augmentation for class imbalance
+- 0.83 recall for COVID-19 cases
+- Stack: TensorFlow, Keras, VGG16, ResNet50, DenseNet121, InceptionV3, NumPy, Matplotlib
+
+### SmartEyes — Real-Time Obstacle Detection
+github.com/Harshini1331/SmartEyes-Obstacle-Detection-System
+- YOLOv7 for real-time multi-class object detection (80+ categories)
+- Multi-mode pipeline: live webcam, pre-recorded video, static images via CLI
+- Stack: Python, YOLOv7, OpenCV, PyTorch, NVIDIA CUDA, NumPy
+
+### Agricultural Crop Rotation Planner (2023)
+github.com/Harshini1331/Crop-Rotation-Planner
+- Benchmarked 6 ML algorithms — Gaussian Naive Bayes (99.54%) outperformed Random Forest (99.3%)
+- EDA confirmed feature independence — theoretically optimal estimator
+- Stack: Python, Scikit-learn, Streamlit, Pandas, Matplotlib, Seaborn
+
+## Key Metrics (use these in every outreach)
+- 150–400x RAG pipeline speedup (15s → 100ms via Redis caching)
+- 40% LLM API cost reduction (ILP/Bloom project)
+- Sub-50ms inference latency (NVIDIA Triton)
+- 98% model accuracy (IMS bearing fault detection)
+- 3.97 GPA (MS UC Riverside)
+
+## LinkedIn Profile (optimized)
+Headline: Generative AI · ML Engineer · RAG · LLMOps · NLP | LangChain · LangGraph · NVIDIA Triton · LoRA/QLoRA · FastAPI · MLOps | MS @ UC Riverside
+
+Top 5 Featured Skills:
+1. Machine Learning
+2. Natural Language Processing (NLP)
+3. Large Language Models (LLMs)
+4. Retrieval-Augmented Generation (RAG)
+5. MLOps
+
+## Full Skills List (50)
+Core AI/ML: Machine Learning, Deep Learning, NLP, LLMs, Generative AI, RAG, Fine-Tuning, Prompt Engineering, LLMOps, MLOps
+GenAI & RAG Stack: LangChain, LangGraph, Agentic AI, Vector Databases, Hybrid Search, Semantic Search, NER, Information Extraction
+MLOps & Infrastructure: Docker, FastAPI, NVIDIA Triton, Apache Airflow, Redis, CI/CD, Model Deployment, REST APIs
+Frameworks: Python, PyTorch, TensorFlow, Scikit-learn, Hugging Face, Keras, OpenCV, ONNX
+Data & Search: SQL, PostgreSQL, OpenSearch, pgvector, FAISS, Pandas
+Speech & Multimodal: Speech Recognition, Speech-to-Text, Multilingual NLP
+Full Stack & Cloud: React.js, TypeScript, GCP, Supabase, NumPy
+Broad Net: Data Science, Transfer Learning
+
+## Target Companies (priority order)
+Tier 1 (AI-native): Langfuse, LangChain, Weights & Biases, Arize AI, Unstructured.io, Weaviate, Cohere, Glean, Moveworks, Sarvam AI
+Tier 2 (Enterprise AI): NVIDIA, Hugging Face, Scale AI, Databricks, Observe.AI, Perplexity AI, Mistral AI
+Tier 3 (Big Tech): Google, Microsoft, Meta, Anthropic, OpenAI, Amazon
+Tier 4 (Domain fit): Duolingo, Khan Academy, AI4Bharat, ElevenLabs
+
+## Outreach Rules
+- Always lead with the strongest relevant metric for that company
+- Never mention predictive maintenance / IMS project in outreach (not confident)
+- Always personalize to company's specific product/domain
+- 2nd degree connections only for priority outreach
+- Skip: non-tech companies, non-AI roles, 3rd degree unless Tier 1 company
+- Connect limit: 10-15 per day max
+- Note limit: 300 characters
+
+## Certifications
+- Claude Code in Action (2026)
+- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+- Oracle Cloud Infrastructure 2025 Certified Generative AI Professional
+
+## LinkedIn Banner
+- Dark technical blue aesthetic
+- Tagline: "The model is 10% of the work. I do the other 90%"
+- Role descriptor: "AI Engineer · ML Engineer"
+- Geometric AI figures on both sides
+
+## GitHub
+- Username: Harshini1331
+- README optimized with typing animation, metrics table, featured projects
+- Key repos: NanoInference, ScholarStream, ims-fault-diagnosis, DECODING-PULMONARY-HEALTH, SmartEyes, Crop-Rotation-Planner
