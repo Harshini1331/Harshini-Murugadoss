@@ -284,6 +284,19 @@ ul {
     margin-bottom: 0.6rem;
 }
 
+.hero-tagline {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+    display: block;
+}
+
+.hero-tagline::after {
+    display: none;
+}
+
 .hero-subtitle {
     font-size: clamp(1.1rem, 1.5vw, 1.25rem);
     color: var(--text-secondary);
